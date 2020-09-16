@@ -18,11 +18,8 @@ final class HomePresenter: HomePresenterProtocol {
     
     func presentTodoItems(response: TodoListResponse) {
         let todoList: [Todo] = response.items.map { item in
-            if let isCompleted = savedTodoItems[item.id] {
-                return Todo(id: item.id, text: item.text, dayId: item.dayId, isCompleted: isCompleted)
-            } else {
-                return Todo(id: item.id, text: item.text, dayId: item.dayId, isCompleted: false)
-            }
+            let isCompleted = savedTodoItems[item.id]
+            return Todo(id: item.id, text: item.text, dayId: item.dayId, isCompleted: isCompleted ?? false)
         }
         view?.handleOutputs(.showTodoList(todoList))
     }

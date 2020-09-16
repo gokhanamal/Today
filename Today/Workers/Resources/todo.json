@@ -29,6 +29,11 @@
          "id": "6",
          "text": "Don't forget to buy coffe!",
          "dayId": 1
+      },
+      {
+         "id": "7",
+         "text": "Don't forget to buy coffe!",
+         "dayId": 2
       }
    ]
 }

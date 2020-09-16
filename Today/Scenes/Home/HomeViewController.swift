@@ -24,6 +24,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupCollectionView()
+        setupnNavigationController()
         interactor?.viewDidLoad()
     }
     
@@ -35,6 +36,10 @@ final class HomeViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    
+    private func setupnNavigationController() {
+        navigationItem.title = "To-do List"
     }
 }
 
