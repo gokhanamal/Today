@@ -17,12 +17,15 @@ protocol HomePresenterProtocol {
     func presentTodoItems(response: TodoListResponse)
     func presentSavedTodoItems(response: [String: Bool])
     func presentDays(days: [Day])
+    func selected(at id: Int)
+    func setCompleted(id: String, isCompleted: Bool)
     func presentError(error: Error)
 }
 
 protocol HomeInteractorProtocol {
     func viewDidLoad()
     func setCompleted(id: String, isCompleted: Bool)
+    func selected(at id: Int)
 }
 
 protocol HomeBuilderProtocol {

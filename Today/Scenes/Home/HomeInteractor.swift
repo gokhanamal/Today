@@ -54,6 +54,11 @@ final class HomeInteractor: HomeInteractorProtocol {
     }
     
     func setCompleted(id: String, isCompleted: Bool) {
+        presenter.setCompleted(id: id, isCompleted: isCompleted)
         userDefaultsWorker.setCompleted(id: id, isCompleted: isCompleted)
+    }
+    
+    func selected(at id: Int) {
+        presenter.selected(at: id)
     }
 }
