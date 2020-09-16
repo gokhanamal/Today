@@ -14,7 +14,7 @@ final class HomeInteractor: HomeInteractorProtocol {
     var userDefaultsWorker: UserDefaultsWorker
     var presenter: HomePresenterProtocol
     
-    private var dayOfWeeks = [
+    private var daysOfWeek = [
           Day(image: UIImage(named: "todo")!, name: "Monday"),
           Day(image: UIImage(named: "todo")!, name: "Tuesday"),
           Day(image: UIImage(named: "todo")!, name: "Wednesday"),
@@ -50,7 +50,7 @@ final class HomeInteractor: HomeInteractorProtocol {
             }
         }
         
-        self.presenter.presentDays(days: dayOfWeeks)
+        self.presenter.presentDays(days: daysOfWeek)
     }
     
     func setCompleted(id: String, isCompleted: Bool) {
