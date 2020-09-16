@@ -218,8 +218,8 @@
 			children = (
 				77EA5BC525124C2700B0F30A /* Fakes */,
 				77EA5BBD2512482400B0F30A /* TodayTests.swift */,
-				77EA5BBF2512482400B0F30A /* Info.plist */,
 				77EA5BC825124CA300B0F30A /* MockMainWorker.swift */,
+				77EA5BBF2512482400B0F30A /* Info.plist */,
 			);
 			path = TodayTests;
 			sourceTree = "<group>";

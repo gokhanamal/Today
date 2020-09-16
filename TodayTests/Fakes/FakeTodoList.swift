@@ -12,10 +12,8 @@ import Foundation
 extension TodoResponse {
     static func fake() -> [TodoResponse] {
         return [
-            TodoResponse(id: "1", text: "Fake", dayId: 1),
-            TodoResponse(id: "1", text: "Fake", dayId: 1),
-            TodoResponse(id: "1", text: "Fake", dayId: 1),
-            TodoResponse(id: "1", text: "Fake", dayId: 1)
+            TodoResponse(id: "1", text: "Fake", dayId: 0),
+            TodoResponse(id: "1", text: "Fake", dayId: 0),
         ]
     }
 }
@@ -23,10 +21,8 @@ extension TodoResponse {
 extension Todo {
     static func fake() -> [Todo] {
         return [
-            Todo(id: "1", text: "Fake", dayId: 1, isCompleted: false),
-            Todo(id: "1", text: "Fake", dayId: 1, isCompleted: false),
-            Todo(id: "1", text: "Fake", dayId: 1, isCompleted: false),
-            Todo(id: "1", text: "Fake", dayId: 1, isCompleted: false)
+            Todo(id: "1", text: "Fake", dayId: 0, isCompleted: false),
+            Todo(id: "1", text: "Fake", dayId: 0, isCompleted: false)
         ]
     }
 }
