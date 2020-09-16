@@ -29,8 +29,19 @@ protocol HomeBuilderProtocol {
     static func make() -> UINavigationController
 }
 
-enum HomePresenterOutputs {
+enum HomePresenterOutputs: Equatable {
     case showDayList([Day])
     case showTodoList([Todo])
     case showError(String)
+    
+    static func == (lhs: HomePresenterOutputs, rhs: HomePresenterOutputs) -> Bool {
+        switch (lhs, rhs) {
+        case (.showDayList(let listA), .showDayList(let listB)):
+            return listA.count == listB.count
+        case (.showTodoList(let listA), .showTodoList(let listB)):
+        return listA.count == listB.count
+        default:
+            return true
+        }
+    }
 }

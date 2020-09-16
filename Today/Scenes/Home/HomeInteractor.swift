@@ -10,7 +10,7 @@ import Foundation
 import class UIKit.UIImage
 
 final class HomeInteractor: HomeInteractorProtocol {
-    var worker: MainWorker
+    var worker: MainWorkerProtocol
     var userDefaultsWorker: UserDefaultsWorker
     var presenter: HomePresenterProtocol
     
@@ -24,7 +24,7 @@ final class HomeInteractor: HomeInteractorProtocol {
           Day(image: UIImage(named: "todo")!, name: "Sunday")
       ]
     
-    init(worker: MainWorker, userDefaultsWorker: UserDefaultsWorker, presenter: HomePresenterProtocol) {
+    init(worker: MainWorkerProtocol, userDefaultsWorker: UserDefaultsWorker, presenter: HomePresenterProtocol) {
         self.worker = worker
         self.presenter = presenter
         self.userDefaultsWorker = userDefaultsWorker
